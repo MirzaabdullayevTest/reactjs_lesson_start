@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello World</title>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <style>
+    .book {
+      display: inline-block;
+      border: 2px solid #ccc;
+      box-shadow: 2px 3px 1px #eee;
+      padding: 10px;
+      margin: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="root"></div>
+
+  <!-- <div class="book">
+    <h2 class="title">Million dollarlik xato</h2>
+    <span>Year: <strong>2019</strong></span>
+  </div>
+
+  <div class="book">
+    <h2 class="title">Diqqat</h2>
+    <span>Year: <strong>2015</strong></span>
+  </div>
+
+  <div class="book">
+    <h2 class="title">React JS</h2>
+    <span>Year: <strong>2013</strong></span>
+  </div> -->
+
+
+
+
+  <script type="text/babel">
+    const Book = (props) => {
+      // console.log(props);
+      return (
+        <div className="book">
+          <h2 className="title">{props.title}</h2>
+          <span>Year: <strong>{props.year}</strong></span>
+        </div>
+      )
+    }
+
+    const Div = () => {
+      return (
+        <div>
+          <Book title="Million dollarlik xato" year="2019" />
+          <Book title="Diqqat" year="2015" />
+          <Book title="React JS" year="2013" />
+        </div>
+      )
+    }
+
+    ReactDOM.render(
+      <Div />,
+      document.querySelector('#root')
+    );
+
+  </script>
+
+
+  <!--
+  Note: this page is a great way to try React but it's not suitable for production.
+  It slowly compiles JSX with Babel in the browser and uses a large development build of React.
+
+  To set up a production-ready React build environment, follow these instructions:
+  * https://reactjs.org/docs/add-react-to-a-new-app.html
+  * https://reactjs.org/docs/add-react-to-an-existing-app.html
+
+  You can also use React without JSX, in which case you can remove Babel:
+  * https://reactjs.org/docs/react-without-jsx.html
+  * https://reactjs.org/docs/cdn-links.html
+-->
+</body>
+
+</html>
