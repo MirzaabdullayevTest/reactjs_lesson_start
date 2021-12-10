@@ -1,0 +1,16 @@
+.Book {
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgb(126, 120, 120);
+    text-align: center;
+}
+
+input.green {
+    border: 3px solid green;
+}
+
+input.red {
+    border: 3px solid red;
+}
